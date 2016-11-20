@@ -1,9 +1,12 @@
 "use strict";
+let dicepack = dice;
+dicepack.rollDice = rollDice;
+dicepack.generateDice = generateDice;
+dicepack.setRandom = setRandom;
 function dice(input) {
     let obj = parse(input);
     return generateDice(obj.times, obj.face, obj.modifier);
 }
-exports.dice = dice;
 function rollDice(times, face, modifier = 0, random = defaultRandom) {
     if (times < 0)
         throw new Error('roll dice, times must >=0');
@@ -15,18 +18,15 @@ function rollDice(times, face, modifier = 0, random = defaultRandom) {
     }
     return Math.round(sumrnd * face + 0.5);
 }
-exports.rollDice = rollDice;
 function generateDice(times, face, modifier = 0) {
     return function (random) {
         return rollDice(times, face, modifier, random || defaultRandom);
     };
 }
-exports.generateDice = generateDice;
 var defaultRandom = Math.random;
 function setRandom(newRandom) {
     defaultRandom = newRandom;
 }
-exports.setRandom = setRandom;
 function parse(input) {
     let result = { times: 1, face: 6, modifier: 0 };
     let match = input.match(/^\s*(\d+)?\s*[dD]\s*(\d+)\s*(.*?)\s*$/);
@@ -49,3 +49,4 @@ function parse(input) {
     }
     return result;
 }
+module.exports = dice;

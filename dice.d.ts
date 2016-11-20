@@ -1,4 +1,12 @@
-export declare function dice(input: string): (random?: () => number) => number;
-export declare function rollDice(times: number, face: number, modifier?: number, random?: () => number): number;
-export declare function generateDice(times: number, face: number, modifier?: number): (random?: () => number) => number;
-export declare function setRandom(newRandom: () => number): void;
+declare module 'd6.5' {
+
+    interface IDice {
+        (input: string): (random?: () => number) => number
+        rollDice: (times: number, face: number, modifier?: number, random?) => number
+        generateDice: (times: number, face: number, modifier?) => (random?: () => number) => number
+        setRandom: (newRandom: () => number) => void
+    }
+
+    var dice: IDice
+    export = dice
+}
