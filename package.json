@@ -1,9 +1,9 @@
 {
   "name": "d6.5",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "this is a package to generate D&D dice",
   "main": "dice.js",
-  "type": "dice.d.ts",
+  "types": "dice.d.ts",
   "scripts": {
     "test": "node dice_test.js"
   },
