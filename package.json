@@ -1,0 +1,27 @@
+{
+  "name": "d6.5",
+  "version": "0.0.1",
+  "description": "this is a package to generate D&D dice",
+  "main": "dice.js",
+  "type": "dice.d.ts",
+  "scripts": {
+    "test": "node dice_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5alamander/d6.5.git"
+  },
+  "keywords": [
+    "D&D",
+    "dice"
+  ],
+  "author": "sa1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5alamander/d6.5/issues"
+  },
+  "homepage": "https://github.com/5alamander/d6.5#readme",
+  "devDependencies": {
+    "@types/node": "^6.0.48"
+  }
+}
