@@ -1,6 +1,6 @@
 {
   "name": "d6.5",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "this is a package to generate D&D dice",
   "main": "dice.js",
   "types": "dice.d.ts",

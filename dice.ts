@@ -33,7 +33,7 @@ function rollDice (times: number, face: number, modifier: number = 0, random = d
     if (face <= 0) throw new Error('roll dice, face must >0')
 
     let sumrnd = 0
-    for (let i = 0; i < times; i ++) {
+    for (let i = times; i >= 1; i --) {
         sumrnd += random()
     }
     return Math.round(sumrnd * face + 0.5)
