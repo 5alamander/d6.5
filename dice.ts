@@ -64,7 +64,7 @@ function setRandom(newRandom: () => number) {
 
 function parse (input: string) {
     let result = { times: 1, face: 6, modifier: 0 }
-    let match = input.match(/^\s*([\d\.]+)?\s*[dD]\s*([\d\.]+)\s*(.*?)\s*$/)
+    let match = input.match(/^\s*([\d\.]+)?\s*[dD]\s*([\d\.]+)\s*(.*)\s*$/)
     if (match) {
         if (match[1]) {
             result.times = parseFloat(match[1])
